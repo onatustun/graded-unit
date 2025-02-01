@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <p className="text-white text-5xl mb-2">All Season Sauna</p>
 
-          <p className="px-4 lg:w-2/5 lg:px-0">Beautifully designed, privacy-focused, and packed with features. We care about your experience, not your data.</p>
+          <p className="px-4 lg:w-2/5 lg:px-0">Lorem Ipsum, Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
         </div>
       </div>
 
