@@ -4,7 +4,7 @@ import { faArrowRight, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export function Header() {
   return (
-    <header className="fixed w-full flex justify-center items-center backdrop-saturate-[150%] bg-[#dfecdf]/40 backdrop-blur-[4px] border-b-[1px] shadow-sm border-[#bfd9bf]/90 lg:px-6 lg:py-1">
+    <header className="fixed w-full flex justify-center items-center backdrop-saturate-[150%] bg-[#dfecdf]/40 backdrop-blur-[4px] z-100 border-b-[1px] shadow-sm border-[#bfd9bf]/90 lg:px-6 lg:py-1">
       <nav className="flex items-center w-full mx-auto gap-2 relative py-4 px-8 lg:w-fit lg:gap-20">
         <Link href="/" className="text-lg lg:text-xl mr-4 lg:mr-0 flex gap-2 items-center text-[#133913] font-bold text-primary">
           <FontAwesomeIcon icon={faAngleDown} style={{fontSize:"36px"}}/>

@@ -10,7 +10,7 @@ const lato = Lato({ subsets: ["latin"], weight: ["300", "400", "700"], variable:
 
 export const metadata = {
   title: "All Season Sauna",
-  description: "Experience deep relaxation and rejuvenation in our peaceful sauna sanctuary.",
+  description: "Graded Unit Website",
 }
 
 export default function RootLayout({
