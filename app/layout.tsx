@@ -9,7 +9,7 @@ const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["300", "400"
 const lato = Lato({ subsets: ["latin"], weight: ["300", "400", "700"], variable: "--font-lato" })
 
 export const metadata = {
-  title: "Zen Sauna Retreat - A Tranquil Oasis",
+  title: "All Season Sauna",
   description: "Experience deep relaxation and rejuvenation in our peaceful sauna sanctuary.",
 }
 
