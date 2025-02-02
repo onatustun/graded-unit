@@ -5,7 +5,7 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 
 export function Footer() {
   return (
-    <footer className="relative w-full flex flex-col gap-24 bg-black px-6 pt-12 overflow-hidden !pb-0 text-white md:p-16 lg:gap-[15%] lg:p-24">
+    <footer className="relative w-full flex flex-col gap-24 z-20 bg-black px-6 pt-12 overflow-hidden !pb-0 text-white md:p-16 lg:gap-[15%] lg:p-24">
       <p className="text-white text-5xl">All Season Sauna</p>
 
       <div className="flex w-full flex-col justify-between gap-6 lg:my-12 md:flex-row md:pr-44 lg:pr-52">
