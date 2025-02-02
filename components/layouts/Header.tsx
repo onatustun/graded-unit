@@ -5,10 +5,10 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export function Header() {
   return (
-    <header className="fixed w-full flex justify-center items-center backdrop-saturate-[150%] bg-white/60 backdrop-blur-[4px] z-100 border-b-[1px] shadow-sm border-black/30 lg:px-6 lg:py-1">
+    <header className="fixed w-full flex justify-center items-center backdrop-saturate-[150%] bg-white/60 backdrop-blur-[3px] z-100 border-b-[1px] shadow-sm border-black/30 lg:px-6 lg:py-1">
       <nav className="flex items-center w-full gap-6 relative py-4 px-8 lg:w-fit lg:gap-20">
         <Link href="/" className="text-lg lg:text-xl lg:mr-0 flex gap-2 items-center font-bold text-black">
-          <FontAwesomeIcon icon={faAngleDown} style={{fontSize:"36px"}}/>
+          <div className="aspect-square bg-black h-[36px] rounded-full"></div>
 
           <p className="hidden md:block">All Season Sauna</p>
         </Link>
@@ -32,7 +32,7 @@ export function Header() {
 
           <li>
             <Link href="#more" className="flex items-center gap-2">
-              <p>More</p>
+              <p>Support</p>
 
               <FontAwesomeIcon icon={faAngleDown} style={{fontSize:"16px"}}/>
             </Link>

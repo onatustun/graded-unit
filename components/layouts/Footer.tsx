@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="font-semibold">More</p>
+            <p className="font-semibold">Support</p>
 
             <div className="flex flex-col opacity-80">
               <Link href="/">Contact Us</Link>
