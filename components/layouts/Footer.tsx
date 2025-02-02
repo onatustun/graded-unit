@@ -1,25 +1,16 @@
 import Link from "next/link"
+import { BookBtn } from "../ui/BookBtn"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export function Footer() {
   return (
-    <footer className="relative w-full h-max flex flex-col gap-24 bg-[#133913] px-4 pt-12 border-black border-t overflow-hidden !pb-0 text-white md:gap-[15%] lg:p-24">
-      <div className="flex w-full flex-col items-center justify-between lg:flex-row">
-        <div>
-          <p className="text-white text-5xl mb-2">All Season Sauna</p>
+    <footer className="relative w-full flex flex-col gap-24 bg-black px-6 pt-12 overflow-hidden !pb-0 text-white md:p-16 lg:gap-[15%] lg:p-24">
+      <p className="text-white text-5xl">All Season Sauna</p>
 
-          <p className="px-4 lg:w-2/5 lg:px-0">Lorem Ipsum, Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-        </div>
-      </div>
+      <div className="flex w-full flex-col justify-between gap-6 lg:my-12 md:flex-row md:pr-44 lg:pr-52">
 
-      <div className="flex w-full flex-col justify-between gap-6 lg:my-12 lg:flex-row lg:pr-52">
-        <Link href="/" className="lg:text-base text-sm bg-white px-6 border-2 py-2 flex items-center justify-between h-fit w-fit gap-2 text-black rounded-full">
-          <p>Book Now</p>
-
-          <FontAwesomeIcon icon={faArrowRight} style={{fontSize:"16px"}} />
-        </Link>
+        <BookBtn variant="light" />
 
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
@@ -53,27 +44,29 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <p className="font-semibold">Services</p>
+        <div className="flex gap-6 flex-col lg:flex-row w-2/5 justify-between">
+          <div className="flex flex-col gap-2">
+            <p className="font-semibold">Services</p>
 
-          <div className="flex flex-col opacity-80">
-            <Link href="/">Options</Link>
+            <div className="flex flex-col opacity-80">
+              <Link href="/">Options</Link>
 
-            <Link href="/">Pricing</Link>
+              <Link href="/">Pricing</Link>
 
-            <Link href="/">Memberships</Link>
+              <Link href="/">Memberships</Link>
+            </div>
           </div>
-        </div>
 
-        <div className="flex flex-col gap-2">
-          <p className="font-semibold">More</p>
+          <div className="flex flex-col gap-2">
+            <p className="font-semibold">More</p>
 
-          <div className="flex flex-col opacity-80">
-            <Link href="/">Contact Us</Link>
+            <div className="flex flex-col opacity-80">
+              <Link href="/">Contact Us</Link>
 
-            <Link href="/">FAQ</Link>
+              <Link href="/">FAQ</Link>
 
-            <Link href="/">Reviews</Link>
+              <Link href="/">Reviews</Link>
+            </div>
           </div>
         </div>
       </div>
