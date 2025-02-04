@@ -1,32 +1,37 @@
 import Link from "next/link"
-import { BookBtn } from "../ui/BookBtn"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 export function Footer() {
   return (
     <footer className="relative w-full flex flex-col gap-24 z-20 bg-black px-6 pt-12 overflow-hidden !pb-0 text-white md:p-16 lg:gap-[15%] lg:p-24">
-      <p className="text-white text-5xl">All Season Sauna</p>
+      <div className="text-white text-5xl">All Season Sauna</div>
 
-      <div className="flex w-full flex-col justify-between gap-6 lg:my-12 md:flex-row md:pr-44 lg:pr-52">
+      <div className="flex w-full flex-col justify-between gap-6 lg:my-12 md:flex-row">
+        <Link href="/" className={cn(buttonVariants({ variant: "light" }), "rounded-full")}>
+          Book Now
+          <FontAwesomeIcon icon={faArrowRight} />
+        </Link>
 
-        <BookBtn variant="light" />
-
-        <div className="flex flex-col gap-10">
+        <div className="md:w-2/3 lg:w-3/4 flex flex-col md:flex-row">
+        <div className="flex flex-col gap-10 md:w-full lg:w-1/2">
           <div className="flex flex-col gap-2">
-            <p className="font-semibold">Follow Us</p>
+            <div className="font-semibold">Follow Us</div>
 
             <div className="flex items-center gap-4 opacity-80">
               <Link href="/">
-                <FontAwesomeIcon icon={faFacebook} style={{fontSize:"16px"}} />
+                <FontAwesomeIcon icon={faFacebook} />
               </Link>
 
               <Link href="/">
-                <FontAwesomeIcon icon={faInstagram} style={{fontSize:"16px"}} />
+                <FontAwesomeIcon icon={faInstagram} />
               </Link>
 
               <Link href="/">
-                <FontAwesomeIcon icon={faTwitter} style={{fontSize:"16px"}} />
+                <FontAwesomeIcon icon={faTwitter} />
               </Link>
             </div>
           </div>
@@ -44,8 +49,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex gap-6 flex-col lg:flex-row w-2/5 justify-between">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col lg:flex-row w-full justify-between gap-6 mt-6 md:mt-0 lg:gap-0">
+          <div className="flex flex-col gap-2 w-full lg:w-1/2">
             <p className="font-semibold">Services</p>
 
             <div className="flex flex-col opacity-80">
@@ -57,7 +62,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 lg:w-1/2">
             <p className="font-semibold">Support</p>
 
             <div className="flex flex-col opacity-80">
@@ -68,6 +73,7 @@ export function Footer() {
               <Link href="/">Reviews</Link>
             </div>
           </div>
+        </div>
         </div>
       </div>
 
