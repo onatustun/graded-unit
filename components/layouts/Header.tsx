@@ -14,7 +14,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export function Header() {
   return (
     <header className="fixed w-full flex justify-center items-center backdrop-saturate-[150%] bg-white/60 backdrop-blur-[3px] z-100 border-b-[1px] shadow-sm border-black/30 lg:px-6 lg:py-1">
-      <nav className="flex items-center w-full gap-6 relative py-4 px-8 lg:w-fit lg:gap-20">
+      <nav className="flex items-center w-full gap-4 md:gap-6 relative py-4 px-2 md:px-8 lg:w-fit lg:gap-20">
         <Link href="/" className="lg:mr-0 flex gap-2 items-center">
           <div className="aspect-square bg-black h-[36px] rounded-full"></div>
 
@@ -63,7 +63,7 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="hidden min-[320px]:flex">
               <NavigationMenuTrigger>Support</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="flex flex-col gap-4 p-2 md:w-[400px] lg:w-[500px]">
@@ -85,7 +85,7 @@ export function Header() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Link href="/" className={cn(buttonVariants({ variant: "default" }), "lg:text-base rounded-full hidden md:ml-auto md:flex")}>
+        <Link href="/" className={cn(buttonVariants({ variant: "default" }), "lg:text-base rounded-full hidden ml-auto min-[550px]:flex")}>
           Book Now
           <FontAwesomeIcon icon={faArrowRight} style={{fontSize: "16px"}} />
         </Link>
