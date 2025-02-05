@@ -14,7 +14,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export function Header() {
   return (
     <header className="fixed w-full flex justify-center items-center backdrop-saturate-[150%] bg-white/60 backdrop-blur-[3px] z-100 border-b-[1px] shadow-sm border-black/30 lg:px-6 lg:py-1">
-      <nav className="flex items-center w-full gap-4 md:gap-6 relative py-4 px-2 md:px-8 lg:w-fit lg:gap-20">
+      <nav className="flex items-center w-full gap-4 md:gap-6 relative max-[550px]:py-3 py-4 px-2 md:px-8 lg:w-fit lg:gap-20">
         <Link href="/" className="lg:mr-0 flex gap-2 items-center">
           <div className="aspect-square bg-black h-[36px] rounded-full"></div>
 
