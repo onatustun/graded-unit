@@ -7,7 +7,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 export function Footer() {
   return (
-    <footer className="relative w-full flex flex-col gap-24 z-20 bg-black px-6 pt-12 text-white md:p-16 lg:gap-[15%] lg:p-24">
+    <footer className="relative w-full flex flex-col gap-24 z-10 bg-black px-6 pt-12 text-white md:p-16 lg:gap-[15%] lg:p-24">
       <div className="text-white text-5xl">All Season Sauna</div>
 
       <div className="flex w-full flex-col justify-between gap-6 lg:my-12 md:flex-row">
