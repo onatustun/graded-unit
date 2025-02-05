@@ -1,6 +1,6 @@
-import { Header } from "../components/layouts/Header"
-import { Home } from "../components/Home"
-import { Footer } from "../components/layouts/Footer"
+import { Header } from "@/components/layouts/header"
+import { Home } from "@/components/home"
+import { Footer } from "@/components/layouts/footer"
 
 export default function Page() {
   return (

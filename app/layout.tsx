@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${lato.variable} font-sans bg-[#eff5ef]`}>{children}</body>
+      <body className={`${cormorant.variable} ${lato.variable} font-sans`}>{children}</body>
     </html>
   )
 }
