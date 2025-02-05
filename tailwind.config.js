@@ -15,6 +15,8 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        white: "#f7f9fd",
+        black: "#04070f",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -46,8 +48,7 @@ module.exports = {
         text: "var(--color-text)",
       },
       fontFamily: {
-        sans: ["var(--font-lato)", "sans-serif"],
-        serif: ["var(--font-cormorant)", "serif"],
+        sans: ["var(--font-lato)", "sans-serif"]
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -58,4 +59,3 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
-

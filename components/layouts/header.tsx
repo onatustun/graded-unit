@@ -15,7 +15,7 @@ export function Header() {
         <Link href="/" className="lg:mr-0 flex gap-2 items-center">
           <div className="aspect-square bg-black h-[36px] rounded-full"></div>
 
-          <div className="hidden md:block font-bold text-black text-lg lg:text-xl">All Season Sauna</div>
+          <div className="hidden md:block font-semibold text-black text-lg lg:text-xl">All Season Sauna</div>
         </Link>
 
         <NavigationMenu>
