@@ -3,6 +3,7 @@ import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
@@ -71,7 +72,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 bg-white/70 backdrop-blur-[5px] backdrop-contast-[110] backdrop-saturate-150 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+      "left-0 bg-white top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
       className
     )}
     {...props}
@@ -117,6 +118,35 @@ const NavigationMenuIndicator = React.forwardRef<
 NavigationMenuIndicator.displayName =
   NavigationMenuPrimitive.Indicator.displayName
 
+interface NavigationMenuContentListItemProps {
+  title: string
+  description: string
+  href: string
+ }
+
+ const NavigationMenuContentListItem: React.FC<NavigationMenuContentListItemProps> = ({ title, description, href }) => {
+  return (
+    <Link href={href} title={title} className="p-2 hover:backdrop-brightness-[0.97] rounded-xl duration-100">
+      <div className="text-base lg:text-lg font-bold">{title}</div>
+      <div className="text-xs lg:text-sm">{description}</div>
+    </Link>
+  )
+ }
+
+ interface NavigationMenuContentCustomListProps {
+  items: NavigationMenuContentListItemProps[]
+ }
+
+ const NavigationMenuContentCustomList: React.FC<NavigationMenuContentCustomListProps> = ({ items }) => {
+  return (
+   <ul className="flex flex-col gap-4 p-2 md:w-[400px] lg:w-[500px]">
+    {items.map((item: NavigationMenuContentListItemProps, index: number) => (
+     <NavigationMenuContentListItem key={index} title={item.title} description={item.description} href={item.href} />
+    ))}
+   </ul>
+  )
+ }
+
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,
@@ -127,4 +157,5 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport,
+  NavigationMenuContentCustomList,
 }

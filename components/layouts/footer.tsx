@@ -3,6 +3,7 @@ import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { AboutUsItems, ServicesItems, SupportItems } from "@/lib/navItems"
 
 export function Footer() {
   return (
@@ -40,11 +41,11 @@ export function Footer() {
             <p className="font-semibold">About Us</p>
 
             <div className="flex flex-col opacity-80">
-              <Link href="/">History</Link>
+              <Link href="/">{AboutUsItems[0].title}</Link>
 
-              <Link href="/">Benefits</Link>
+              <Link href="/">{AboutUsItems[1].title}</Link>
 
-              <Link href="/">Our Team</Link>
+              <Link href="/">{AboutUsItems[2].title}</Link>
             </div>
           </div>
         </div>
@@ -54,11 +55,11 @@ export function Footer() {
             <p className="font-semibold">Services</p>
 
             <div className="flex flex-col opacity-80">
-              <Link href="/">Options</Link>
+              <Link href="/">{ServicesItems[0].title}</Link>
 
-              <Link href="/">Pricing</Link>
+              <Link href="/">{ServicesItems[1].title}</Link>
 
-              <Link href="/">Memberships</Link>
+              <Link href="/">{ServicesItems[2].title}</Link>
             </div>
           </div>
 
@@ -66,11 +67,11 @@ export function Footer() {
             <p className="font-semibold">Support</p>
 
             <div className="flex flex-col opacity-80">
-              <Link href="/">Contact Us</Link>
+              <Link href="/">{SupportItems[0].title}</Link>
 
-              <Link href="/">FAQ</Link>
+              <Link href="/">{SupportItems[1].title}</Link>
 
-              <Link href="/">Reviews</Link>
+              <Link href="/">{SupportItems[2].title}</Link>
             </div>
           </div>
         </div>
