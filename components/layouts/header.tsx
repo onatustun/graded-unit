@@ -5,7 +5,7 @@ import { AboutUsItems, ServicesItems, SupportItems } from "@/lib/navItems"
 
 export function Header() {
   return (
-    <header className="w-full flex justify-center items-center bg-white z-50 shadow-md lg:px-6 lg:py-1">
+    <header className="w-full flex justify-center items-center bg-white z-50 shadow border lg:px-6 lg:py-1">
       <nav className="flex items-center w-full gap-4 md:gap-6 relative max-[550px]:py-3 py-4 px-2 md:px-8 lg:w-fit lg:gap-20">
         <Link href="/" className="lg:mr-0 flex gap-2 items-center">
           <div className="aspect-square bg-black h-[36px] rounded-full"></div>
