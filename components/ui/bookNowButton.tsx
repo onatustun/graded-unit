@@ -13,8 +13,8 @@ export function BookNowButton({ className, variant = "dark" }: BookNowButtonProp
     <Link 
       href="/" 
       className={clsx(
-        "flex items-center justify-center rounded-full gap-2 px-5 py-2 text-sm font-medium lg:text-base h-fit w-fit",
-        variant === "dark" ? "bg-black text-white" : "bg-white text-black",
+        "flex items-center justify-center rounded-full gap-2 px-5 py-3 text-sm font-medium lg:text-base h-fit w-fit",
+        variant === "dark" ? "bg-foreground text-background" : "bg-background text-foreground",
         className
       )}
     >

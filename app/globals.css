@@ -2,15 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-background: #eff5ef;
-  --color-text: #3c4a3e;
-  --color-primary: #7c9885;
-  --color-secondary: #b5c9b7;
-  --color-accent: #e0e5e0;
-}
+@layer base {
+  :root {
+    --foreground: 120 3% 14%;
+    --background: 112 50% 97%;
+    --primary: 114 60% 52%;
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 80.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+  }
+
+  .dark {
+    --foreground: 120 3% 86%;
+    --background: 112 50% 3%;
+    --primary: 114 60% 48%;
+  }
 }

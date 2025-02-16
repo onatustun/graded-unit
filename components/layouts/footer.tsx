@@ -7,8 +7,8 @@ import { AboutUsItems, ServicesItems, SupportItems } from "@/lib/navItems"
 
 export function Footer() {
   return (
-    <footer className="relative w-full flex flex-col gap-16 z-10 bg-black px-6 py-12 text-white md:p-16 lg:gap-[15%] lg:p-24">
-      <div className="text-white text-3xl">All Season Sauna</div>
+    <footer className="relative w-full flex flex-col gap-16 z-10 bg-foreground px-6 py-12 text-background md:p-16 lg:gap-8 lg:p-24">
+      <div className="text-background text-3xl">All Season Sauna</div>
 
       <div className="flex w-full flex-col justify-between gap-6 md:flex-row">
         <BookNowButton variant="light" />
