@@ -43,7 +43,7 @@ export function Header() {
         </NavigationMenu>
 
         <div className="items-center gap-5 hidden ml-auto min-[550px]:flex">
-          <ThemeToggle />
+          <ThemeToggle className="hidden lg:flex" />
           <BookNow />
         </div>
       </nav>

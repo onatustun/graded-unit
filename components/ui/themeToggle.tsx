@@ -2,14 +2,24 @@
 
 import { useTheme } from "@/components/context/themeProvider"
 import { LuMoonStar, LuSun } from "react-icons/lu"
+import clsx from "clsx"
 
-export function ThemeToggle() {
+interface ThemeToggleProps {
+  className?: string
+  variant?: "dark" | "light"
+}
+
+export function ThemeToggle({ className, variant = "light" }: ThemeToggleProps) {
   const { theme, toggleTheme } = useTheme()
 
   return (
     <button
       onClick={toggleTheme}
-      className="hidden lg:flex aspect-square h-7 w-7 p-1 rounded-full dark:hover:backdrop-brightness-200 hover:backdrop-brightness-95"
+      className={clsx(
+        "aspect-square h-7 w-7 p-1 rounded-full",
+        variant === "dark" ? "bg-foreground text-background hover:brightness-200 dark:hover:brightness-95" : "bg-background text-foreground hover:brightness-95 dark:hover:brightness-200",
+        className
+      )}
     >
       {theme === "light" ? <LuMoonStar className="h-full w-full" /> : <LuSun className="h-full w-full" />}
     </button>

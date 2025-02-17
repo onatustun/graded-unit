@@ -1,9 +1,10 @@
-import { BookNow } from "@/components/ui/bookNow";
+import { BookNow } from "@/components/ui/bookNow"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { AboutUsItems, ServicesItems, SupportItems } from "@/lib/navItems"
+import { ThemeToggle } from "@/components/ui/themeToggle"
 
 export function Footer() {
   return (
@@ -11,7 +12,10 @@ export function Footer() {
       <div className="text-background text-5xl">All Season Sauna</div>
 
       <div className="flex w-full flex-col justify-between gap-6 md:flex-row">
-        <BookNow variant="light" />
+        <div className="flex gap-6 items-center md:flex-col md:items-start">
+          <BookNow variant="light" />
+          <ThemeToggle variant="dark" className="flex lg:hidden"/>
+        </div>
 
         <div className="md:w-2/3 lg:w-3/4 flex flex-col md:flex-row">
         <div className="flex flex-col gap-6 md:w-full lg:w-1/2">
