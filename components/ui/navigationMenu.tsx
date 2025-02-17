@@ -1,11 +1,9 @@
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
-import { cva } from "class-variance-authority"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
-import Link from "next/link"
-
 import { cn } from "@/lib/utils"
+import { cva } from "class-variance-authority"
+import { LuChevronDown } from "react-icons/lu"
+import Link from "next/link"
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
@@ -43,7 +41,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 text-sm min-[367px]:text-base lg:text-lg text-foreground items-center justify-center rounded-md gap-1.5 md:gap-2 disabled:pointer-events-none disabled:opacity-50"
+  "group inline-flex h-9 text-sm min-[367px]:text-base lg:text-lg text-foreground items-center justify-center rounded-md gap-1 disabled:pointer-events-none disabled:opacity-50"
 )
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -56,8 +54,7 @@ const NavigationMenuTrigger = React.forwardRef<
     {...props}
   >
     {children}{" "}
-    <FontAwesomeIcon
-      icon={faAngleDown}
+    <LuChevronDown
       className="relative top-[1px] group-data-[state=open]:rotate-180 transition-transform"
       aria-hidden="true"
     />
