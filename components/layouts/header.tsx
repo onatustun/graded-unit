@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/ui/themeToggle"
 export function Header() {
   return (
     <header className="w-full flex justify-center items-center bg-background z-50 lg:px-6 lg:py-1">
-      <nav className="flex items-center w-full gap-4 md:gap-6 relative max-[550px]:py-3 py-4 px-2 md:px-8 lg:w-fit lg:gap-24">
+      <nav className="flex items-center w-full gap-4 md:gap-6 relative max-[550px]:py-3 py-4 px-4 md:px-8 lg:w-fit lg:gap-24">
         <Link href="/" className="lg:mr-0 flex gap-2 items-center">
           <div className="aspect-square bg-primary h-[36px] rounded-full"></div>
 
