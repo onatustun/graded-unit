@@ -5,6 +5,7 @@ import "./globals.css"
 import { Nunito } from "next/font/google"
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { ThemeProvider } from "@/components/context/themeProvider";
 config.autoAddCss = false;
 
 const nunito = Nunito({ subsets: ["latin"] })
@@ -23,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={`${nunito.className} min-h-screen bg-background text-foreground font-sans antialised`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <ThemeProvider>      
+        <body className={`${nunito.className} min-h-screen bg-background text-foreground font-sans antialised`}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   )
 }

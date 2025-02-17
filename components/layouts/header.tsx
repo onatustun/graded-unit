@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContentCustomList } from "@/components/ui/navigationMenu"
-import { BookNowButton } from "@/components/ui/bookNowButton"
-import { LuMoonStar } from "react-icons/lu";
+import { BookNow } from "@/components/ui/bookNow"
 import { AboutUsItems, ServicesItems, SupportItems } from "@/lib/navItems"
+import { ThemeToggle } from "@/components/ui/themeToggle"
 
 export function Header() {
   return (
@@ -32,7 +32,7 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem className="hidden min-[320px]:flex">
+            <NavigationMenuItem>
               <NavigationMenuTrigger>Support</NavigationMenuTrigger>
 
               <NavigationMenuContent>
@@ -43,8 +43,8 @@ export function Header() {
         </NavigationMenu>
 
         <div className="items-center gap-5 hidden ml-auto min-[550px]:flex">
-          <button className="hidden lg:flex aspect-square h-6 w-6"><LuMoonStar className="h-full w-full" /></button>
-          <BookNowButton />
+          <ThemeToggle />
+          <BookNow />
         </div>
       </nav>
     </header>

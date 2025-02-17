@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import clsx from "clsx"
 
-interface BookNowButtonProps {
+interface BookNowProps {
   className?: string
   variant?: "dark" | "light"
 }
 
-export function BookNowButton({ className, variant = "dark" }: BookNowButtonProps) {
+export function BookNow({ className, variant = "dark" }: BookNowProps) {
   return (
     <Link 
       href="/" 

@@ -43,7 +43,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 text-sm md:text-base lg:text-lg text-foreground items-center justify-center rounded-md gap-1.5 md:gap-2 transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+  "group inline-flex h-9 text-sm md:text-base lg:text-lg text-foreground items-center justify-center rounded-md gap-1.5 md:gap-2 disabled:pointer-events-none disabled:opacity-50"
 )
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -126,7 +126,7 @@ interface NavigationMenuContentListItemProps {
 
  const NavigationMenuContentListItem: React.FC<NavigationMenuContentListItemProps> = ({ title, description, href }) => {
   return (
-    <Link href={href} title={title} className="p-2 hover:backdrop-brightness-[0.97] rounded-xl">
+    <Link href={href} title={title} className="p-2 hover:backdrop-brightness-95 dark:hover:backdrop-brightness-200 rounded-xl">
       <div className="text-base lg:text-lg font-bold">{title}</div>
       <div className="text-xs lg:text-sm">{description}</div>
     </Link>
